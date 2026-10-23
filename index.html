@@ -76,12 +76,12 @@
         .head-display-item h3 { margin: 10px 0 5px 0; color: #0d1b2a; }
         .head-display-item p { font-size: 0.85em; color: #666; }
         
-        /* Estilo de Tarjetas con Contador (Catálogo y Servicios) */
+        /* Estilo de Tarjetas generales y de productos */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 15px; }
-        .card { background: white; border: 1px solid #e0e1dd; border-radius: 8px; padding: 20px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; }
-        .card img { width: 100%; height: 140px; object-fit: contain; background-color: #fafafa; border-radius: 6px; padding: 8px; }
-        .card h3 { margin: 10px 0 5px 0; font-size: 1.1em; color: #0d1b2a; }
-        .card .specs { font-size: 0.85em; color: #666; margin-bottom: 15px; line-height: 1.4; }
+        .card, .product-card { background: white; border: 1px solid #e0e1dd; border-radius: 8px; padding: 20px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card img { width: 100%; height: 140px; object-fit: contain; background-color: #fafafa; border-radius: 6px; padding: 8px; }
+        .product-card h3, .card h3 { margin: 10px 0 5px 0; font-size: 1.1em; color: #0d1b2a; }
+        .product-card .specs, .card .specs { font-size: 0.85em; color: #666; margin-bottom: 15px; line-height: 1.4; }
         
         /* Botones específicos para secciones corporativas */
         .btn-card-action { display: block; background-color: #00b4d8; color: #0d1b2a; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; margin-top: auto; transition: background 0.2s; }
@@ -162,7 +162,7 @@
 
             <div class="grid">
                 <!-- Ventana de Cubierta D27.9 mm -->
-                <div class="card" data-product-id="ventana_d27.9">
+                <div class="product-card" data-product-id="ventana_d27.9">
                     <img src="LENTE DE 27.9 X 4.1 MM.png" alt="Ventana de Cubierta D27.9mm">
                     <div>
                         <h3 class="product-name">BM110 - Ventana de Cubierta (Fondo) D27.9mm</h3>
@@ -179,7 +179,7 @@
                 </div>
 
                 <!-- Lente de Colimación D24.9 x 1.5 mm -->
-                <div class="card" data-product-id="lente_d24.9">
+                <div class="product-card" data-product-id="lente_d24.9">
                     <img src="LENTE  COLLIMATINGD24.9X 1.5 MMRT.png" alt="Lente Colimador D24.9x1.5mm">
                     <div>
                         <h3 class="product-name">BM110 - Lente de Colimador D24.9x1.5mm</h3>
@@ -196,7 +196,7 @@
                 </div>
 
                 <!-- Módulo Lente de Enfoque -->
-                <div class="card" data-product-id="lente_enfoque_f100">
+                <div class="product-card" data-product-id="lente_enfoque_f100">
                     <img src="https://via.placeholder.com/250x160?text=Lente+Enfoque+-F100mm" alt="Lente de Enfoque F100mm">
                     <div>
                         <h3 class="product-name">BM110 - Módulo Lente de Enfoque F100mm</h3>
@@ -213,7 +213,7 @@
                 </div>
 
                 <!-- Anillo Cerámico M11 -->
-                <div class="card" data-product-id="anillo_ceramico_m11">
+                <div class="product-card" data-product-id="anillo_ceramico_m11">
                     <img src="CERAMICO.png" alt="Anillo Cerámico M11">
                     <div>
                         <h3 class="product-name">BM110 - Anillo Cerámico M11</h3>
@@ -230,7 +230,7 @@
                 </div>
 
                 <!-- Boquilla Doble 1.5mm -->
-                <div class="card" data-product-id="boquilla_doble_1.5">
+                <div class="product-card" data-product-id="boquilla_doble_1.5">
                     <img src="BOQUILLA DOBLE 1.5 MM M-14.jpg" alt="Boquilla Doble 1.5mm">
                     <div>
                         <h3 class="product-name">BM110 - Boquilla Doble 1.5mm</h3>
@@ -247,7 +247,7 @@
                 </div>
 
                 <!-- Boquilla Simple 1.2mm -->
-                <div class="card" data-product-id="boquilla_simple_1.2">
+                <div class="product-card" data-product-id="boquilla_simple_1.2">
                     <img src="BOQUILLA SENCILLA 1.2 MM M-14.jpg" alt="Boquilla Simple 1.2mm">
                     <div>
                         <h3 class="product-name">BM110 - Boquilla Simple 1.2mm</h3>
@@ -264,7 +264,7 @@
                 </div>
 
                 <!-- Cartucho de Lente (PW) -->
-                <div class="card" data-product-id="cartucho_lente_pw">
+                <div class="product-card" data-product-id="cartucho_lente_pw">
                     <img src="CARTUCHO PW.png" alt="Cartucho PW">
                     <div>
                         <h3 class="product-name">BM110 - Cartucho de Lente (PW)</h3>
@@ -281,7 +281,7 @@
                 </div>
 
                 <!-- Empaque de Sellado -->
-                <div class="card" data-product-id="empaque_sellado">
+                <div class="product-card" data-product-id="empaque_sellado">
                     <img src="https://via.placeholder.com/250x160?text=Empaque+de+Sellado" alt="Empaque de Sellado">
                     <div>
                         <h3 class="product-name">BM110 - Empaque de Sellado</h3>
@@ -303,31 +303,31 @@
         <div id="bs12k" style="margin-top: 50px;">
             <div class="section-title">
                 <h2>⚡ Catálogo Láser: Consumibles Cabezal BS12K-CAT</h2>
-                <span style="font-size: 0.8em; color: #666;">Potencia $\le 12\text{kW}$[span_0](start_span)[span_0](end_span)</span>
+                <span style="font-size: 0.8em; color: #666;">Potencia $\le 12\text{kW}$[cite: 8]</span>
             </div>
 
             <div class="head-display">
                 <div class="head-display-item">
                     <img src="https://via.placeholder.com/300x180?text=Cabezal+BS12K-CAT" alt="Cabezal BS12K-CAT">
                     <h3>Cabezal BS12K-CAT</h3>
-                    <p>Potencia máx. 12kW[span_1](start_span)[span_1](end_span) | Colimación F100 / Enfoque F220[span_2](start_span)[span_2](end_span)</p>
+                    <p>Potencia máx. 12kW[cite: 8] | Colimación F100 / Enfoque F220[cite: 8]</p>
                 </div>
                 <div class="head-display-item">
                     <img src="https://via.placeholder.com/300x180?text=Especificaciones+BS12K-CAT" alt="Especificaciones BS12K-CAT">
                     <h3>Datos Técnicos</h3>
-                    <p>Interfaz QBH/QD/Q+/LOE[span_3](start_span)[span_3](end_span) | Auto Focus -40~+40mm[span_4](start_span)[span_4](end_span)</p>
+                    <p>Interfaz QBH/QD/Q+/LOE[cite: 8] | Auto Focus -40~+40mm[cite: 8]</p>
                 </div>
             </div>
 
             <div class="grid">
                 <!-- Lente Protector / Colimación F100 para BS12K -->
-                <div class="card" data-product-id="bs12k_colimacion">
+                <div class="product-card" data-product-id="bs12k_colimacion">
                     <img src="https://via.placeholder.com/250x160?text=Lente+Colimacion+BS12K" alt="Lente Colimación BS12K">
                     <div>
                         <h3 class="product-name">BS12K-CAT - Lente Colimación F100</h3>
                         <p class="specs">
-                            <strong>Modelo:</strong> BS12K-CAT[span_5](start_span)[span_5](end_span)<br>
-                            <strong>Función:</strong> Óptica de colimación de alta potencia ($\le 12\text{kW}$[span_6](start_span)[span_6](end_span)).
+                            <strong>Modelo:</strong> BS12K-CAT[cite: 8]<br>
+                            <strong>Función:</strong> Óptica de colimación de alta potencia ($\le 12\text{kW}$[cite: 8]).
                         </p>
                     </div>
                     <div class="quantity-selector">
@@ -338,12 +338,12 @@
                 </div>
 
                 <!-- Lente de Enfoque F220 para BS12K -->
-                <div class="card" data-product-id="bs12k_enfoque">
+                <div class="product-card" data-product-id="bs12k_enfoque">
                     <img src="https://via.placeholder.com/250x160?text=Lente+Enfoque+BS12K" alt="Lente Enfoque BS12K">
                     <div>
                         <h3 class="product-name">BS12K-CAT - Lente de Enfoque F220</h3>
                         <p class="specs">
-                            <strong>Modelo:</strong> BS12K-CAT[span_7](start_span)[span_7](end_span)<br>
+                            <strong>Modelo:</strong> BS12K-CAT[cite: 8]<br>
                             <strong>Función:</strong> Enfoque de alta precisión para sistemas de potencia.
                         </p>
                     </div>
@@ -355,12 +355,12 @@
                 </div>
 
                 <!-- Ventana / Cristal de Protección BS12K -->
-                <div class="card" data-product-id="bs12k_proteccion">
+                <div class="product-card" data-product-id="bs12k_proteccion">
                     <img src="https://via.placeholder.com/250x160?text=Cristal+Proteccion+BS12K" alt="Cristal Protección BS12K">
                     <div>
                         <h3 class="product-name">BS12K-CAT - Cristal de Protección</h3>
                         <p class="specs">
-                            <strong>Modelo:</strong> BS12K-CAT[span_8](start_span)[span_8](end_span)<br>
+                            <strong>Modelo:</strong> BS12K-CAT[cite: 8]<br>
                             <strong>Función:</strong> Protege componentes internos contra salpicaduras.
                         </p>
                     </div>
@@ -372,13 +372,13 @@
                 </div>
 
                 <!-- Boquillas y Anillo Cerámico BS12K -->
-                <div class="card" data-product-id="bs12k_boquilla">
+                <div class="product-card" data-product-id="bs12k_boquilla">
                     <img src="https://via.placeholder.com/250x160?text=Boquilla+BS12K" alt="Boquilla BS12K">
                     <div>
                         <h3 class="product-name">BS12K-CAT - Boquilla de Corte Industrial</h3>
                         <p class="specs">
-                            <strong>Modelo:</strong> BS12K-CAT[span_9](start_span)[span_9](end_span)<br>
-                            <strong>Función:</strong> Boquilla reforzada para gas a alta presión (25bar[span_10](start_span)[span_10](end_span)).
+                            <strong>Modelo:</strong> BS12K-CAT[cite: 8]<br>
+                            <strong>Función:</strong> Boquilla reforzada para gas a alta presión (25bar[cite: 8]).
                         </p>
                     </div>
                     <div class="quantity-selector">
@@ -548,8 +548,9 @@
                 let itemsList = "";
                 let hasItems = false;
 
-                const allCards = document.querySelectorAll('.card');
-                allCards.forEach(card => {
+                // Seleccionar únicamente las tarjetas de producto del catálogo láser
+                const productCards = document.querySelectorAll('.product-card');
+                productCards.forEach(card => {
                     const qtyInput = card.querySelector('.qty-input');
                     if (qtyInput) {
                         const qtyValue = parseInt(qtyInput.value);
@@ -569,7 +570,7 @@
                 }
 
                 const encodedMessage = quoteText.replace(/ /g, '%20');
-                const whatsappUrl = https://wa.me/${whatsappNumber}?text=${encodedMessage};
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
                 globalQuoteBtn.setAttribute('href', whatsappUrl);
             }
 
