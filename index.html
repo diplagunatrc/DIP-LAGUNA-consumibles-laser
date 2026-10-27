@@ -58,7 +58,7 @@
         nav a { color: #e0e1dd; text-decoration: none; font-weight: 500; font-size: 1em; transition: color 0.2s; }
         nav a:hover { color: #00b4d8; }
 
-        /* Imagen 1: Sección de Presentación / Hero */
+        /* Sección de Presentación / Hero */
         .hero-section {
             background-color: #1b263b;
             color: white;
@@ -90,7 +90,7 @@
         /* Contenedor General */
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
 
-        /* Imagen 2: Categorías de Cabezales / Marcas */
+        /* Categorías de Cabezales / Marcas */
         .section-header-flex {
             display: flex;
             justify-content: space-between;
@@ -149,7 +149,7 @@
         }
         .btn-ver-mas:hover { background-color: #00b4d8; color: white; }
 
-        /* Imagen 3 y 4: Despliegue de Componentes y Tarjetas de Productos */
+        /* Despliegue de Componentes y Tarjetas de Productos */
         .catalog-title {
             font-size: 1.8em;
             color: #1b263b;
@@ -189,7 +189,7 @@
         .btn-qty:hover { background-color: #d1d9e6; }
         .qty-input { width: 45px; height: 32px; text-align: center; border: 1px solid #d1d9e6; border-radius: 4px; font-weight: bold; font-size: 1em; color: #1b263b; }
 
-        /* Imagen 4: Listado Detallado de Boquillas con Checkbox (Palomita) y Contadores por Medida */
+        /* Listado Detallado de Boquillas con Checkbox y Contadores por Medida */
         .nozzles-list { display: flex; flex-direction: column; gap: 8px; margin-top: auto; border-top: 1px solid #eaeaea; padding-top: 10px; }
         .nozzle-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.85em; color: #333; }
         .nozzle-row label { display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 500; }
@@ -243,7 +243,7 @@
         </nav>
     </header>
 
-    <!-- Imagen 1: Sección de Presentación / Hero -->
+    <!-- Sección de Presentación / Hero con la imagen solicitada -->
     <section class="hero-section" id="inicio">
         <div class="hero-content">
             <h1>Venta y Distribución de Consumibles para Corte Láser Fibra</h1>
@@ -251,13 +251,13 @@
             <a href="#categorias" class="btn-ver-catalogo">VER CATALOGO</a>
         </div>
         <div class="hero-image">
-            <img src="https://via.placeholder.com/600x350?text=Maquinaria+Laser+Industrial+DIP" alt="Corte Laser Industrial">
+            <img src="Gemini_Generated_Image_k2xewrk2xewrk2xe.jpg" alt="Maquinaria Laser Industrial DIP">
         </div>
     </section>
 
     <div class="container">
 
-        <!-- Imagen 2: Categorías de Cabezales (Marcas) -->
+        <!-- Categorías de Cabezales (Marcas) -->
         <div id="categorias">
             <div class="section-header-flex">
                 <h2>CATEGORÍAS DE CABEZALES</h2>
@@ -297,7 +297,7 @@
         </div>
 
 
-        <!-- Imagen 3 y 4: Despliegue de Componentes del Cabezal BM110 -->
+        <!-- SECCIÓN: CABEZAL RAYTOOLS BM110 -->
         <div id="bm110">
             <div class="catalog-title">
                 <h2>Consumibles Especializados RAYTOOLS BM110</h2>
@@ -398,7 +398,7 @@
                     </div>
                 </div>
 
-                <!-- IMAGEN 4: BOQUILLA DOBLE CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
+                <!-- BOQUILLA DOBLE CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
                 <div class="product-card">
                     <img src="BOQUILLA DOBLE 1.5 MM M-14.jpg" alt="Boquilla Doble">
                     <div>
@@ -408,9 +408,7 @@
                             <strong>Rosca:</strong> M14 de alta precisión. Selecciona medida(s):
                         </p>
                     </div>
-                    <!-- Lista de medidas con Checkbox y Contadores (Imagen 4) -->
                     <div class="nozzles-list">
-                        <!-- 1.0 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_doble_1.0">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.0 mm</label>
                             <div class="nozzle-controls">
@@ -419,7 +417,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 1.2 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_doble_1.2">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.2 mm</label>
                             <div class="nozzle-controls">
@@ -428,7 +425,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 1.5 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_doble_1.5">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.5 mm</label>
                             <div class="nozzle-controls">
@@ -437,7 +433,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 2.0 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_doble_2.0">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.0 mm</label>
                             <div class="nozzle-controls">
@@ -446,7 +441,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 2.5 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_doble_2.5">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.5 mm</label>
                             <div class="nozzle-controls">
@@ -455,7 +449,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 4.0 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_doble_4.0">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 4.0 mm</label>
                             <div class="nozzle-controls">
@@ -467,7 +460,7 @@
                     </div>
                 </div>
 
-                <!-- IMAGEN 4: BOQUILLA SIMPLE CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
+                <!-- BOQUILLA SIMPLE CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
                 <div class="product-card">
                     <img src="BOQUILLA SENCILLA 1.2 MM M-14.jpg" alt="Boquilla Simple">
                     <div>
@@ -477,9 +470,7 @@
                             <strong>Capa:</strong> Cobre purificado. Selecciona medida(s):
                         </p>
                     </div>
-                    <!-- Lista de medidas con Checkbox y Contadores (Imagen 4) -->
                     <div class="nozzles-list">
-                        <!-- 1.0 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_simple_1.0">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.0 mm</label>
                             <div class="nozzle-controls">
@@ -488,7 +479,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 1.2 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_simple_1.2">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.2 mm</label>
                             <div class="nozzle-controls">
@@ -497,7 +487,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 1.5 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_simple_1.5">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.5 mm</label>
                             <div class="nozzle-controls">
@@ -506,7 +495,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 2.0 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_simple_2.0">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.0 mm</label>
                             <div class="nozzle-controls">
@@ -515,7 +503,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 2.5 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_simple_2.5">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.5 mm</label>
                             <div class="nozzle-controls">
@@ -524,7 +511,6 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <!-- 4.0 mm -->
                         <div class="nozzle-row" data-nozzle-group="boquilla_simple_4.0">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 4.0 mm</label>
                             <div class="nozzle-controls">
@@ -540,22 +526,35 @@
         </div>
 
 
-        <!-- SECCIÓN: CABEZAL BS12K-CAT -->
+        <!-- SECCIÓN: CABEZAL RAYTOOLS BS12K-CAT (REPLICADO CON NUEVAS IMÁGENES Y NOMBRES) -->
         <div id="bs12k" style="margin-top: 50px;">
             <div class="catalog-title">
-                <h2>Consumibles Especializados Cabezal BS12K-CAT</h2>
-                <span style="font-size: 0.75em; color: #555;">Potencia $\le 12\text{kW}$</span>
+                <h2>Consumibles Especializados RAYTOOLS BS12K-CAT</h2>
+                <span style="font-size: 0.75em; color: #555;">Selección Componentes</span>
+            </div>
+
+            <div class="head-display">
+                <div class="head-display-item">
+                    <img src="RayTools-BS12K.png" alt="Raytools BS12K-CAT Cabezal Completo">
+                    <h3>Raytools BS12K-CAT</h3>
+                    <p>Cabezal de Corte Láser Fibra Completo</p>
+                </div>
+                <div class="head-display-item">
+                    <img src="RayTools-BS12K-despiece.webp" alt="Diagrama de Despiece BS12K-CAT">
+                    <h3>Diagrama de Despiece</h3>
+                    <p>Corte Transversal con Identificación de Consumibles</p>
+                </div>
             </div>
 
             <div class="grid">
-                <!-- Lente Protector / Colimación F100 para BS12K -->
-                <div class="product-card" data-product-id="bs12k_colimacion">
-                    <img src="RayTools-BS12K.png" alt="Lente Colimación BS12K">
+                <!-- Ventana de Cubierta / Lente de Protección para BS12K -->
+                <div class="product-card" data-product-id="bs12k_ventana">
+                    <img src="LENTE DE 27.9 X 4.1 MM.png" alt="Ventana de Cubierta BS12K">
                     <div>
-                        <h3 class="product-name">BS12K-CAT - Lente Colimación F100</h3>
+                        <h3 class="product-name">BS12K-CAT - Ventana de Cubierta (Fondo)</h3>
                         <p class="specs">
-                            <strong>Modelo:</strong> BS12K-CAT[cite: 8]<br>
-                            <strong>Función:</strong> Óptica de colimación de alta potencia ($\le 12\text{kW}$[cite: 8]).
+                            <strong>Aplicación:</strong> Protección óptica de alta potencia.<br>
+                            <strong>Función:</strong> Asegura estanqueidad y limpieza interna.
                         </p>
                     </div>
                     <div class="quantity-selector">
@@ -568,14 +567,14 @@
                     </div>
                 </div>
 
-                <!-- Lente de Enfoque F220 para BS12K -->
-                <div class="product-card" data-product-id="bs12k_enfoque">
-                    <img src="RayTools-BS12K-despiece.webp" alt="Lente Enfoque BS12K">
+                <!-- Lente de Colimación para BS12K -->
+                <div class="product-card" data-product-id="bs12k_colimacion">
+                    <img src="LENTE  COLLIMATINGD24.9X 1.5 MMRT.png" alt="Lente Colimador BS12K">
                     <div>
-                        <h3 class="product-name">BS12K-CAT - Lente de Enfoque F220</h3>
+                        <h3 class="product-name">BS12K-CAT - Lente de Colimador</h3>
                         <p class="specs">
-                            <strong>Modelo:</strong> BS12K-CAT[cite: 8]<br>
-                            <strong>Función:</strong> Enfoque de alta precisión para sistemas de potencia.
+                            <strong>Lente:</strong> Colimación precisa para alta potencia ($\le 12\text{kW}$[cite: 8]).<br>
+                            <strong>Función:</strong> Enfoque primario del haz láser.
                         </p>
                     </div>
                     <div class="quantity-selector">
@@ -587,6 +586,171 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Anillo Cerámico para BS12K -->
+                <div class="product-card" data-product-id="bs12k_ceramico">
+                    <img src="CERAMICO.png" alt="Anillo Cerámico BS12K">
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Anillo Cerámico</h3>
+                        <p class="specs">
+                            <strong>Función:</strong> Sensor capacitivo de altura.<br>
+                            <strong>Material:</strong> Cerámica de alta resistencia térmica.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
+                        <div style="display: flex; gap: 5px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cartucho para BS12K -->
+                <div class="product-card" data-product-id="bs12k_cartucho">
+                    <img src="CARTUCHO PW.png" alt="Cartucho BS12K">
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Cartucho de Lente (PW)</h3>
+                        <p class="specs">
+                            <strong>Compatibilidad:</strong> Cabezal BS12K-CAT[cite: 8]<br>
+                            <strong>Función:</strong> Portalentes extraíble de cambio rápido.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
+                        <div style="display: flex; gap: 5px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOQUILLA DOBLE BS12K CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
+                <div class="product-card">
+                    <img src="BOQUILLA DOBLE 1.5 MM M-14.jpg" alt="Boquilla Doble BS12K">
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Boquilla Doble</h3>
+                        <p class="specs">
+                            <strong>Aplicación:</strong> Corte industrial de alta potencia con Oxígeno.<br>
+                            <strong>Selecciona medida(s):</strong>
+                        </p>
+                    </div>
+                    <div class="nozzles-list">
+                        <div class="nozzle-row" data-nozzle-group="bs12k_doble_1.0">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_doble_1.2">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.2 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_doble_1.5">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_doble_2.0">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_doble_2.5">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_doble_4.0">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 4.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOQUILLA SIMPLE BS12K CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
+                <div class="product-card">
+                    <img src="BOQUILLA SENCILLA 1.2 MM M-14.jpg" alt="Boquilla Simple BS12K">
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Boquilla Simple</h3>
+                        <p class="specs">
+                            <strong>Aplicación:</strong> Corte industrial de alta potencia con Nitrógeno.<br>
+                            <strong>Selecciona medida(s):</strong>
+                        </p>
+                    </div>
+                    <div class="nozzles-list">
+                        <div class="nozzle-row" data-nozzle-group="bs12k_simple_1.0">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_simple_1.2">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.2 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_simple_1.5">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_simple_2.0">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_simple_2.5">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row" data-nozzle-group="bs12k_simple_4.0">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 4.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -675,7 +839,7 @@
                         }
                     }
 
-                    // 2. Recolectar boquillas con checkbox y contadores individuales (Imagen 4)
+                    // 2. Recolectar boquillas con checkbox y contadores individuales
                     const nozzleRows = card.querySelectorAll('.nozzle-row');
                     nozzleRows.forEach(row => {
                         const checkbox = row.querySelector('.nozzle-check');
@@ -683,8 +847,9 @@
                         if (checkbox && checkbox.checked && qtyInputSm) {
                             const qtyVal = parseInt(qtyInputSm.value);
                             const rowLabel = row.querySelector('label').innerText.trim();
+                            const cardTitle = card.querySelector('.product-name') ? card.querySelector('.product-name').innerText : '';
                             if (qtyVal > 0) {
-                                itemsList += `- BM110 - ${rowLabel}: ${qtyVal} piezas `;
+                                itemsList += `- ${cardTitle} (${rowLabel}): ${qtyVal} piezas `;
                                 hasItems = true;
                             }
                         }
@@ -731,7 +896,7 @@
                 }
             });
 
-            // Eventos para contadores pequeños de boquillas y checkboxes (Imagen 4)
+            // Eventos para contadores pequeños de boquillas y checkboxes
             document.querySelectorAll('.nozzle-row').forEach(row => {
                 const checkbox = row.querySelector('.nozzle-check');
                 const decreaseBtn = row.querySelector('.decrease-sm');
