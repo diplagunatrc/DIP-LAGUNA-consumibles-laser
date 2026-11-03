@@ -12,7 +12,7 @@
             margin: 0; 
             padding: 0; 
             padding-bottom: 90px; 
-            background-color: #ffffff; 
+            background-color: #f8fafc; 
             color: #1b263b; 
         }
 
@@ -21,17 +21,18 @@
             background-color: #00b4d8;
             color: #0d1b2a;
             text-align: center;
-            padding: 8px 15px;
+            padding: 10px 15px;
             font-weight: bold;
             font-size: 0.9em;
+            letter-spacing: 0.3px;
         }
         .promo-bar span {
             color: #ffffff;
             background-color: #0d1b2a;
-            padding: 2px 6px;
+            padding: 3px 8px;
             border-radius: 4px;
-            margin-right: 5px;
-            font-size: 0.8em;
+            margin-right: 8px;
+            font-size: 0.85em;
             text-transform: uppercase;
         }
 
@@ -47,20 +48,21 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
-        .logo-container { display: flex; align-items: center; gap: 10px; }
-        .logo-container img { max-height: 55px; width: auto; }
-        .logo-text { font-size: 1.8em; font-weight: bold; color: #ffffff; letter-spacing: 0.5px; }
-        .logo-text span { font-size: 0.5em; display: block; color: #00b4d8; font-weight: normal; margin-top: -4px; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-container img { max-height: 50px; width: auto; object-fit: contain; }
+        .logo-text { font-size: 1.8em; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; line-height: 1; }
+        .logo-text span { font-size: 0.45em; display: block; color: #00f0ff; font-weight: 600; margin-top: 3px; letter-spacing: 1px; }
 
         /* Navegación Superior */
         nav { display: flex; align-items: center; gap: 25px; }
-        nav a { color: #e0e1dd; text-decoration: none; font-weight: 500; font-size: 1em; transition: color 0.2s; }
-        nav a:hover { color: #00b4d8; }
+        nav a { color: #e0e1dd; text-decoration: none; font-weight: 600; font-size: 0.95em; transition: color 0.2s; }
+        nav a:hover { color: #00f0ff; }
 
-        /* Sección de Presentación / Hero */
+        /* Sección Hero */
         .hero-section {
-            background-color: #1b263b;
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
             color: white;
             padding: 60px 40px;
             display: grid;
@@ -69,99 +71,100 @@
             align-items: center;
             border-bottom: 5px solid #00b4d8;
         }
-        .hero-content h1 { font-size: 2.5em; margin: 0 0 20px 0; line-height: 1.2; color: #ffffff; }
-        .hero-content p { font-size: 1.05em; color: #e0e1dd; margin-bottom: 30px; line-height: 1.5; }
+        .hero-content h1 { font-size: 2.5em; margin: 0 0 20px 0; line-height: 1.2; color: #ffffff; font-weight: 800; }
+        .hero-content p { font-size: 1.1em; color: #e0e1dd; margin-bottom: 30px; line-height: 1.6; }
         .btn-ver-catalogo {
             display: inline-block;
             background-color: #00f0ff;
             color: #0d1b2a;
-            padding: 12px 30px;
-            border-radius: 25px;
+            padding: 14px 32px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1em;
+            font-weight: 800;
+            font-size: 0.95em;
             text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0, 240, 255, 0.3);
-            transition: background 0.2s;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.4);
+            transition: all 0.2s ease;
         }
-        .btn-ver-catalogo:hover { background-color: #00b4d8; color: white; }
-        .hero-image img { width: 100%; border-radius: 8px; border: 2px solid #00b4d8; object-fit: cover; max-height: 350px; }
+        .btn-ver-catalogo:hover { background-color: #00b4d8; color: white; transform: translateY(-2px); }
+        .hero-image { display: flex; justify-content: center; }
+        .hero-image img { width: 100%; border-radius: 12px; border: 2px solid #00b4d8; object-fit: cover; max-height: 350px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
 
         /* Contenedor General */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 1280px; margin: 40px auto; padding: 0 20px; }
 
-        /* Categorías de Cabezales / Marcas */
+        /* Encabezados de Sección */
         .section-header-flex {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-end;
             border-bottom: 3px solid #00b4d8;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
             margin-bottom: 35px;
             flex-wrap: wrap;
             gap: 10px;
         }
-        .section-header-flex h2 { margin: 0; color: #1b263b; font-size: 2em; }
-        .section-header-flex span { color: #555; font-size: 1.1em; font-weight: 500; }
+        .section-header-flex h2 { margin: 0; color: #1b263b; font-size: 2em; font-weight: 800; }
+        .section-header-flex span { color: #555; font-size: 1em; font-weight: 600; }
 
+        /* Tarjetas de Marcas */
         .brands-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 25px;
             margin-bottom: 60px;
         }
         .brand-card {
             background: #ffffff;
-            border: 1px solid #dcdcdc;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 30px 20px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        /* Insignia Circular con el tono de la imagen de referencia */
+        .brand-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
         .brand-badge {
-            width: 100px;
-            height: 100px;
-            background-color: #be6f3e;
+            width: 85px;
+            height: 85px;
+            background-color: #1b263b;
             border-radius: 50%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            color: white;
-            font-weight: bold;
-            font-size: 0.9em;
-            box-shadow: 0 4px 10px rgba(190, 111, 62, 0.3);
-            border: 3px solid #ffffff;
-            outline: 2px solid #be6f3e;
+            color: #00f0ff;
+            font-weight: 800;
+            font-size: 1em;
+            letter-spacing: 0.5px;
+            border: 2px solid #00b4d8;
         }
-        .brand-badge svg { width: 42px; height: 42px; fill: #ffffff; }
         .brand-card h3 { margin: 0 0 10px 0; color: #1b263b; font-size: 1.4em; }
-        .brand-card p { font-size: 0.9em; color: #666; margin-bottom: 25px; line-height: 1.4; }
+        .brand-card p { font-size: 0.9em; color: #64748b; margin-bottom: 25px; line-height: 1.4; }
         .btn-ver-mas {
             display: inline-block;
             background-color: #00f0ff;
             color: #0d1b2a;
-            padding: 8px 24px;
+            padding: 9px 26px;
             border-radius: 20px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9em;
+            font-weight: 700;
+            font-size: 0.85em;
             margin-top: auto;
+            transition: background 0.2s;
         }
         .btn-ver-mas:hover { background-color: #00b4d8; color: white; }
 
-        /* Despliegue de Componentes y Tarjetas de Productos */
+        /* Títulos de Catálogo */
         .catalog-title {
             font-size: 1.8em;
             color: #1b263b;
             border-bottom: 3px solid #00b4d8;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
             margin-top: 50px;
             margin-bottom: 25px;
             display: flex;
@@ -170,21 +173,22 @@
             flex-wrap: wrap;
             gap: 10px;
         }
+        .catalog-title h2 { margin: 0; font-size: 1.1em; }
 
-        /* Estructura Simétrica y Simultánea (Secuencial) para Cabezales e Imágenes */
+        /* Cabezales e Imágenes Principales */
         .head-display { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
-            margin-bottom: 25px; 
+            gap: 25px; 
+            margin-bottom: 30px; 
         }
         .head-display-item { 
-            background: #fff; 
-            border: 1px solid #dcdcdc; 
-            border-radius: 8px; 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 12px; 
             padding: 20px; 
             text-align: center; 
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -192,15 +196,15 @@
         }
         .head-display-wrapper {
             width: 100%;
-            height: 200px;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #fafafa;
-            border-radius: 6px;
-            border: 1px solid #eee;
-            margin-bottom: 12px;
-            padding: 10px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #f1f5f9;
+            margin-bottom: 15px;
+            padding: 12px;
         }
         .head-display-item img { 
             max-width: 100%; 
@@ -209,13 +213,133 @@
             height: auto;
             object-fit: contain; 
             cursor: pointer; 
-            transition: transform 0.2s, opacity 0.2s; 
+            transition: transform 0.25s ease, opacity 0.25s ease; 
         }
-        .head-display-item img:hover { transform: scale(1.03); opacity: 0.95; }
-        .head-display-item h3 { margin: 10px 0 5px 0; color: #1b263b; font-size: 1.2em; }
-        .head-display-item p { font-size: 0.85em; color: #666; margin: 0; }
+        .head-display-item img:hover { transform: scale(1.05); opacity: 0.95; }
+        .head-display-item h3 { margin: 8px 0 4px 0; color: #1b263b; font-size: 1.25em; font-weight: 700; }
+        .head-display-item p { font-size: 0.88em; color: #64748b; margin: 0; }
 
-        /* Estilo para la Ventana Modal de Zoom de Imágenes */
+        /* Cuadrícula Secuencial Simétrica de Productos (3 en 3 en escritorio) */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 25px; 
+        }
+
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+        .product-img-wrapper {
+            width: 100%;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #f1f5f9;
+        }
+        .product-card img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .product-card img:hover { transform: scale(1.05); }
+        .product-card h3 { margin: 0 0 8px 0; font-size: 1.1em; color: #1b263b; font-weight: 700; }
+        .product-card .specs { font-size: 0.88em; color: #475569; margin-bottom: 18px; line-height: 1.5; }
+
+        /* Seleccionadores de Cantidad */
+        .quantity-selector { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 8px; 
+            margin-top: auto; 
+            border-top: 1px solid #f1f5f9; 
+            padding-top: 14px; 
+        }
+        .btn-qty { 
+            background-color: #f1f5f9; 
+            border: 1px solid #cbd5e1; 
+            color: #1b263b; 
+            width: 34px; 
+            height: 34px; 
+            border-radius: 50%; 
+            font-weight: 800; 
+            font-size: 1.1em; 
+            cursor: pointer; 
+            transition: background 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-qty:hover { background-color: #00b4d8; color: white; border-color: #00b4d8; }
+        .qty-input { 
+            width: 50px; 
+            height: 34px; 
+            text-align: center; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            font-size: 1em; 
+            color: #1b263b; 
+            background: #fff;
+        }
+
+        /* Lista de Boquillas por Medida */
+        .nozzles-list { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+            margin-top: auto; 
+            border-top: 1px solid #f1f5f9; 
+            padding-top: 12px; 
+        }
+        .nozzle-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.88em; color: #334155; }
+        .nozzle-row label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600; }
+        .nozzle-row input[type="checkbox"] { width: 17px; height: 17px; accent-color: #00b4d8; cursor: pointer; }
+        .nozzle-controls { display: flex; align-items: center; gap: 6px; }
+        .btn-qty-sm { 
+            background-color: #f1f5f9; 
+            border: 1px solid #cbd5e1; 
+            color: #1b263b; 
+            width: 28px; 
+            height: 28px; 
+            border-radius: 50%; 
+            font-weight: 800; 
+            font-size: 0.9em; 
+            cursor: pointer; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-qty-sm:hover { background-color: #00b4d8; color: white; border-color: #00b4d8; }
+        .qty-input-sm { 
+            width: 40px; 
+            height: 28px; 
+            text-align: center; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            font-size: 0.9em; 
+            color: #1b263b; 
+            background: #fff;
+        }
+
+        /* Modal para Zoom */
         .zoom-modal {
             display: none;
             position: fixed;
@@ -224,7 +348,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(13, 27, 42, 0.92);
+            backdrop-filter: blur(4px);
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -238,83 +363,108 @@
         .zoom-modal-content img {
             max-width: 100%;
             max-height: 85vh;
-            border-radius: 6px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-            background-color: #fff;
-            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background-color: #ffffff;
+            padding: 12px;
+            border: 2px solid #00f0ff;
         }
         .zoom-close-btn {
             position: absolute;
-            top: -45px;
+            top: -50px;
             right: 0;
             background-color: #00f0ff;
             color: #0d1b2a;
             border: none;
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            font-size: 1.4em;
-            font-weight: bold;
+            font-size: 1.5em;
+            font-weight: 900;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .zoom-close-btn:hover { background-color: #00b4d8; color: white; transform: scale(1.1); }
+
+        /* Pie de página con Botón de Cotización Global a WhatsApp */
+        .footer-quote { 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
+            background-color: #1b263b; 
+            padding: 14px 20px; 
+            text-align: center; 
+            z-index: 1000; 
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.2); 
+            border-top: 2px solid #00b4d8;
+        }
+        .btn-ws-global { 
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #25d366; 
+            color: white; 
+            padding: 13px 35px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            font-size: 1.05em; 
+            transition: background 0.2s, transform 0.2s; 
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); 
+            letter-spacing: 0.5px;
+        }
+        .btn-ws-global:hover { background-color: #1ebc57; transform: translateY(-2px); }
+
+        /* Servicios e Ingeniería */
+        .service-card { 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 12px; 
+            padding: 25px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+        }
+        .service-card h3 { margin: 0 0 12px 0; color: #1b263b; font-size: 1.25em; font-weight: 700; }
+        .service-card p { font-size: 0.92em; color: #475569; line-height: 1.6; margin-bottom: 22px; }
+        .btn-card-action { 
+            display: block; 
+            background-color: #00f0ff; 
+            color: #0d1b2a; 
+            text-align: center; 
+            padding: 11px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.95em; 
+            margin-top: auto; 
             transition: background 0.2s;
         }
-        .zoom-close-btn:hover { background-color: #00b4d8; color: white; }
-
-        /* Cuadrícula Secuencial para Tarjetas de Productos */
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
-        .product-card {
-            background: white;
-            border: 1px solid #dcdcdc;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.04);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .product-card img { width: 100%; height: 150px; object-fit: contain; background-color: #fafafa; border-radius: 6px; padding: 8px; margin-bottom: 12px; border: 1px solid #eee; cursor: pointer; }
-        .product-card h3 { margin: 0 0 8px 0; font-size: 1.1em; color: #1b263b; }
-        .product-card .specs { font-size: 0.85em; color: #555; margin-bottom: 15px; line-height: 1.4; }
-
-        /* Contadores Simples para Lentes y Cristales */
-        .quantity-selector { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; border-top: 1px solid #eaeaea; padding-top: 12px; }
-        .btn-qty { background-color: #f0f4f8; border: 1px solid #d1d9e6; color: #1b263b; width: 32px; height: 32px; border-radius: 16px; font-weight: bold; font-size: 1.1em; cursor: pointer; }
-        .btn-qty:hover { background-color: #d1d9e6; }
-        .qty-input { width: 45px; height: 32px; text-align: center; border: 1px solid #d1d9e6; border-radius: 4px; font-weight: bold; font-size: 1em; color: #1b263b; }
-
-        /* Listado Detallado de Boquillas con Checkbox y Contadores por Medida */
-        .nozzles-list { display: flex; flex-direction: column; gap: 8px; margin-top: auto; border-top: 1px solid #eaeaea; padding-top: 10px; }
-        .nozzle-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.85em; color: #333; }
-        .nozzle-row label { display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 500; }
-        .nozzle-row input[type="checkbox"] { width: 16px; height: 16px; accent-color: #00b4d8; cursor: pointer; }
-        .nozzle-controls { display: flex; align-items: center; gap: 5px; }
-        .btn-qty-sm { background-color: #f0f4f8; border: 1px solid #d1d9e6; color: #1b263b; width: 26px; height: 26px; border-radius: 13px; font-weight: bold; font-size: 0.9em; cursor: pointer; }
-        .qty-input-sm { width: 38px; height: 26px; text-align: center; border: 1px solid #d1d9e6; border-radius: 4px; font-weight: bold; font-size: 0.9em; color: #1b263b; }
-
-        /* Pie de Página con Botón de Cotización Global a WhatsApp */
-        .footer-quote { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #1b263b; padding: 15px; text-align: center; z-index: 1000; box-shadow: 0 -3px 10px rgba(0,0,0,0.3); }
-        .btn-ws-global { display: inline-block; background-color: #25d366; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1.05em; transition: background 0.2s; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
-        .btn-ws-global:hover { background-color: #1ebc57; }
-        .btn-ws-global::before { content: "📞 "; }
-
-        /* Secciones de Servicios e Ingeniería B2B */
-        .service-card { background: white; border: 1px solid #dcdcdc; border-radius: 8px; padding: 20px; box-shadow: 0 3px 6px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
-        .service-card h3 { margin: 0 0 10px 0; color: #1b263b; font-size: 1.2em; }
-        .service-card p { font-size: 0.9em; color: #555; line-height: 1.5; margin-bottom: 20px; }
-        .btn-card-action { display: block; background-color: #00f0ff; color: #0d1b2a; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95em; margin-top: auto; }
         .btn-card-action:hover { background-color: #00b4d8; color: white; }
 
-        /* Adaptabilidad para Smartphone y Pantallas Pequeñas */
+        /* Adaptación Responsiva Mediana (Tablets / Portátiles) */
+        @media (max-width: 1024px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Adaptación Responsiva para Smartphones */
         @media (max-width: 768px) {
-            .hero-section { grid-template-columns: 1fr; padding: 30px 20px; }
-            header { padding: 15px 20px; flex-direction: column; gap: 10px; }
-            nav { gap: 15px; font-size: 0.9em; overflow-x: auto; width: 100%; padding-bottom: 5px; }
-            .head-display { grid-template-columns: 1fr; gap: 15px; }
-            .head-display-wrapper { height: 180px; }
+            header { padding: 12px 20px; flex-direction: column; gap: 12px; }
+            nav { gap: 15px; font-size: 0.9em; width: 100%; justify-content: center; flex-wrap: wrap; }
+            .hero-section { grid-template-columns: 1fr; padding: 40px 20px; text-align: center; }
+            .hero-content h1 { font-size: 2em; }
+            .head-display { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: 1fr; }
+            .container { padding: 0 15px; margin: 25px auto; }
+            .catalog-title { flex-direction: column; align-items: flex-start; }
+            .btn-ws-global { width: 100%; font-size: 0.95em; padding: 12px 20px; }
         }
     </style>
 </head>
@@ -328,9 +478,9 @@
     <!-- Header Principal -->
     <header>
         <div class="logo-container">
-            <img src="Logo DIP BLANCO SIN FONDO-02.png" alt="DIP Laguna Logo">
+            <img src="Logo DIP BLANCO SIN FONDO-02.png" alt="DIP Laguna Logo" class="zoomable-img">
             <div class="logo-text">
-                Laguna
+                DIP LAGUNA
                 <span>by DG Studio</span>
             </div>
         </div>
@@ -342,21 +492,21 @@
         </nav>
     </header>
 
-    <!-- Sección de Presentación / Hero con la imagen solicitada -->
+    <!-- Sección Hero -->
     <section class="hero-section" id="inicio">
         <div class="hero-content">
             <h1>Venta y Distribución de Consumibles para Corte Láser Fibra</h1>
-            <p>Asegura el máximo rendimiento y precisión en tu maquinaria. Refacciones industriales con cotización instantánea y entrega rápida a todo el país.</p>
-            <a href="#categorias" class="btn-ver-catalogo">VER CATALOGO</a>
+            <p>Asegura el máximo rendimiento y precisión en tu maquinaria. Refacciones industriales con cotización instantánea y entrega rápida a todo México.</p>
+            <a href="#categorias" class="btn-ver-catalogo">VER CATÁLOGO</a>
         </div>
         <div class="hero-image">
-            <img src="Laser dip.jpg" alt="DIP Laguna Logo">
+            <img src="Laser dip.jpg" alt="Portada DIP Laguna" class="zoomable-img">
         </div>
     </section>
 
     <div class="container">
 
-        <!-- Categorías de Cabezales (Marcas con logos terracota/cobre) -->
+        <!-- Categorías de Cabezales (Marcas) -->
         <div id="categorias">
             <div class="section-header-flex">
                 <h2>CATEGORÍAS DE CABEZALES</h2>
@@ -366,42 +516,30 @@
             <div class="brands-grid">
                 <!-- Tarjeta Raytools -->
                 <div class="brand-card">
-                    <div class="brand-badge">
-                        <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-                        <span>RAYTOOLS</span>
-                    </div>
+                    <div class="brand-badge">RAYTOOLS</div>
                     <h3>RAYTOOLS</h3>
-                    <p>Lentes, Boquillas, cuerpos cerámicos.</p>
+                    <p>Lentes, Boquillas y Cuerpos Cerámicos.</p>
                     <a href="#bm110" class="btn-ver-mas">VER MÁS</a>
                 </div>
                 <!-- Tarjeta Bochu -->
                 <div class="brand-card">
-                    <div class="brand-badge">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-                        <span>BOCHU</span>
-                    </div>
+                    <div class="brand-badge" style="background-color: #8c533e; border-color: #b07241;">BOCHU</div>
                     <h3>BOCHU</h3>
-                    <p>Lentes, Boquillas, cuerpos cerámicos.</p>
+                    <p>Lentes, Boquillas y Cuerpos Cerámicos.</p>
                     <a href="#bs12k" class="btn-ver-mas">VER MÁS</a>
                 </div>
                 <!-- Tarjeta Trumpf -->
                 <div class="brand-card">
-                    <div class="brand-badge">
-                        <svg viewBox="0 0 24 24"><path d="M3 13h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V7H3v2z"/></svg>
-                        <span>TRUMPF</span>
-                    </div>
+                    <div class="brand-badge" style="background-color: #a07855; border-color: #c49a74;">TRUMPF</div>
                     <h3>TRUMPF</h3>
-                    <p>Lentes, Boquillas, cuerpos cerámicos.</p>
+                    <p>Lentes, Boquillas y Cuerpos Cerámicos.</p>
                     <a href="#bm110" class="btn-ver-mas">VER MÁS</a>
                 </div>
                 <!-- Tarjeta Precitec -->
                 <div class="brand-card">
-                    <div class="brand-badge">
-                        <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
-                        <span>PRECITEC</span>
-                    </div>
+                    <div class="brand-badge" style="background-color: #8b6243; border-color: #aa7d58;">PRECITEC</div>
                     <h3>PRECITEC</h3>
-                    <p>Lentes, Boquillas, cuerpos cerámicos.</p>
+                    <p>Lentes, Boquillas y Cuerpos Cerámicos.</p>
                     <a href="#bm110" class="btn-ver-mas">VER MÁS</a>
                 </div>
             </div>
@@ -412,7 +550,7 @@
         <div id="bm110">
             <div class="catalog-title">
                 <h2>Consumibles Especializados RAYTOOLS BM110</h2>
-                <span style="font-size: 0.75em; color: #555;">Selección Componentes</span>
+                <span style="font-size: 0.75em; color: #64748b;">Selección de Componentes</span>
             </div>
 
             <div class="head-display">
@@ -436,20 +574,23 @@
                 </div>
             </div>
 
+            <!-- Cuadrícula Secuencial Simétrica de 3 en 3 -->
             <div class="grid">
                 <!-- Ventana de Cubierta D27.9 mm -->
-                <div class="product-card" data-product-id="ventana_d27.9">
-                    <img src="LENTE DE 27.9 X 4.1 MM.png" alt="Ventana de Cubierta D27.9mm" class="zoomable-img">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="LENTE DE 27.9 X 4.1 MM.png" alt="Ventana de Cubierta D27.9mm" class="zoomable-img">
+                    </div>
                     <div>
-                        <h3 class="product-name">BM110 - Ventana de Cubierta (Fondo) D27.9mm</h3>
+                        <h3 class="product-name">BM110 - Lente de Protección Inferior D27.9mm x 4.1mm 4kW</h3>
                         <p class="specs">
-                            <strong>Medida:</strong> D27.9 x 4.1 mm<br>
-                            <strong>Función:</strong> Vidrio óptico de protección. Asegura estanqueidad.
+                            <strong>Medida:</strong> D27.9 x 4.1 mm (4kW)<br>
+                            <strong>Función:</strong> Cristal óptico de protección. Asegura estanqueidad interna.
                         </p>
                     </div>
                     <div class="quantity-selector">
-                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
-                        <div style="display: flex; gap: 5px; align-items: center;">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
                             <button class="btn-qty decrease">-</button>
                             <input type="number" value="0" min="0" class="qty-input">
                             <button class="btn-qty increase">+</button>
@@ -458,18 +599,20 @@
                 </div>
 
                 <!-- Lente de Colimación D24.9 x 1.5 mm -->
-                <div class="product-card" data-product-id="lente_d24.9">
-                    <img src="LENTE  COLLIMATINGD24.9X 1.5 MMRT.png" alt="Lente Colimador D24.9x1.5mm" class="zoomable-img">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="LENTE  COLLIMATINGD24.9X 1.5 MMRT.png" alt="Lente Colimador D24.9x1.5mm" class="zoomable-img">
+                    </div>
                     <div>
-                        <h3 class="product-name">BM110 - Lente de Colimador D24.9x1.5mm</h3>
+                        <h3 class="product-name">BM110 - Lente Colimador D24.9 x 1.5mm 4kW</h3>
                         <p class="specs">
-                            <strong>Lente:</strong> Colimación precisa del haz directo de fibra óptica.<br>
-                            <strong>Medida:</strong> D24.9 x 1.5 mm
+                            <strong>Medida:</strong> D24.9 x 1.5 mm (4kW)<br>
+                            <strong>Función:</strong> Colimación precisa del haz directo de fibra óptica.
                         </p>
                     </div>
                     <div class="quantity-selector">
-                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
-                        <div style="display: flex; gap: 5px; align-items: center;">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
                             <button class="btn-qty decrease">-</button>
                             <input type="number" value="0" min="0" class="qty-input">
                             <button class="btn-qty increase">+</button>
@@ -477,19 +620,21 @@
                     </div>
                 </div>
 
-                <!-- Anillo Cerámico M11 -->
-                <div class="product-card" data-product-id="anillo_ceramico_m11">
-                    <img src="CERAMICO.png" alt="Anillo Cerámico M11" class="zoomable-img">
+                <!-- Anillo Cerámico M14 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="CERAMICO.png" alt="Anillo Cerámico M14" class="zoomable-img">
+                    </div>
                     <div>
-                        <h3 class="product-name">BM110 - Anillo Cerámico M11</h3>
+                        <h3 class="product-name">BM110 - Anillo Cerámico M14</h3>
                         <p class="specs">
-                            <strong>Dimensiones:</strong> 28.5 mm / 24.5 mm (M11)<br>
-                            <strong>Material:</strong> Alta conductividad y sensor capacitivo.
+                            <strong>Dimensiones:</strong> 32 mm (M14)<br>
+                            <strong>Material:</strong> Alta conductividad y respuesta capacitiva constante.
                         </p>
                     </div>
                     <div class="quantity-selector">
-                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
-                        <div style="display: flex; gap: 5px; align-items: center;">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
                             <button class="btn-qty decrease">-</button>
                             <input type="number" value="0" min="0" class="qty-input">
                             <button class="btn-qty increase">+</button>
@@ -498,18 +643,20 @@
                 </div>
 
                 <!-- Cartucho de Lente (PW) -->
-                <div class="product-card" data-product-id="cartucho_lente_pw">
-                    <img src="CARTUCHO PW.png" alt="Cartucho PW" class="zoomable-img">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="CARTUCHO PW.png" alt="Cartucho PW" class="zoomable-img">
+                    </div>
                     <div>
                         <h3 class="product-name">BM110 - Cartucho de Lente (PW)</h3>
                         <p class="specs">
                             <strong>Compatibilidad:</strong> Raytools BM110<br>
-                            <strong>Función:</strong> Portalentes extraíble.
+                            <strong>Función:</strong> Ensamble portalentes de extracción rápida.
                         </p>
                     </div>
                     <div class="quantity-selector">
-                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
-                        <div style="display: flex; gap: 5px; align-items: center;">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
                             <button class="btn-qty decrease">-</button>
                             <input type="number" value="0" min="0" class="qty-input">
                             <button class="btn-qty increase">+</button>
@@ -517,18 +664,20 @@
                     </div>
                 </div>
 
-                <!-- BOQUILLA DOBLE CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
+                <!-- BOQUILLA DOBLE M14 -->
                 <div class="product-card">
-                    <img src="BOQUILLA DOBLE 1.5 MM M-14.jpg" alt="Boquilla Doble" class="zoomable-img">
+                    <div class="product-img-wrapper">
+                        <img src="BOQUILLA DOBLE 1.5 MM M-14.jpg" alt="Boquilla Doble" class="zoomable-img">
+                    </div>
                     <div>
-                        <h3 class="product-name">BM110 - Boquilla Doble</h3>
+                        <h3 class="product-name">BM110 - Boquilla Doble M14</h3>
                         <p class="specs">
                             <strong>Aplicación:</strong> Corte con Oxígeno (Acero al Carbón).<br>
-                            <strong>Rosca:</strong> M14 de alta precisión. Selecciona medida(s):
+                            <strong>Rosca:</strong> M14. Selecciona medida(s):
                         </p>
                     </div>
                     <div class="nozzles-list">
-                        <div class="nozzle-row" data-nozzle-group="boquilla_doble_1.0">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.0 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -536,7 +685,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_doble_1.2">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.2 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -544,7 +693,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_doble_1.5">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.5 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -552,7 +701,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_doble_2.0">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.0 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -560,7 +709,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_doble_2.5">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.5 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -568,7 +717,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_doble_4.0">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 4.0 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -579,18 +728,20 @@
                     </div>
                 </div>
 
-                <!-- BOQUILLA SIMPLE CON SELECCIÓN POR MEDIDAS Y CONTADOR INDIVIDUAL -->
+                <!-- BOQUILLA SIMPLE M14 -->
                 <div class="product-card">
-                    <img src="BOQUILLA SENCILLA 1.2 MM M-14.jpg" alt="Boquilla Simple" class="zoomable-img">
+                    <div class="product-img-wrapper">
+                        <img src="BOQUILLA SENCILLA 1.2 MM M-14.jpg" alt="Boquilla Simple" class="zoomable-img">
+                    </div>
                     <div>
-                        <h3 class="product-name">BM110 - Boquilla Simple</h3>
+                        <h3 class="product-name">BM110 - Boquilla Simple M14</h3>
                         <p class="specs">
                             <strong>Aplicación:</strong> Corte con Nitrógeno / Aire.<br>
-                            <strong>Capa:</strong> Cobre purificado. Selecciona medida(s):
+                            <strong>Rosca:</strong> M14. Selecciona medida(s):
                         </p>
                     </div>
                     <div class="nozzles-list">
-                        <div class="nozzle-row" data-nozzle-group="boquilla_simple_1.0">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.0 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -598,7 +749,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_simple_1.2">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.2 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -606,7 +757,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_simple_1.5">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.5 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -614,7 +765,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_simple_2.0">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.0 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -622,7 +773,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_simple_2.5">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.5 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -630,7 +781,7 @@
                                 <button class="btn-qty-sm increase-sm">+</button>
                             </div>
                         </div>
-                        <div class="nozzle-row" data-nozzle-group="boquilla_simple_4.0">
+                        <div class="nozzle-row">
                             <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 4.0 mm</label>
                             <div class="nozzle-controls">
                                 <button class="btn-qty-sm decrease-sm">-</button>
@@ -640,7 +791,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -649,7 +799,7 @@
         <div id="bs12k" style="margin-top: 50px;">
             <div class="catalog-title">
                 <h2>Consumibles Especializados RAYTOOLS BS12K-CAT</h2>
-                <span style="font-size: 0.75em; color: #555;">Selección Componentes</span>
+                <span style="font-size: 0.75em; color: #64748b;">Selección de Componentes</span>
             </div>
 
             <div class="head-display">
@@ -673,17 +823,639 @@
                 </div>
             </div>
 
+            <!-- Cuadrícula Secuencial Simétrica -->
             <div class="grid">
-                <!-- Ventana de Cubierta / Lente de Protección para BS12K -->
-                <div class="product-card" data-product-id="bs12k_ventana">
-                    <img src="LENTE DE 27.9 X 4.1 MM.png" alt="Ventana de Cubierta BS12K" class="zoomable-img">
+                <!-- Ventana de Cubierta BS12K -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="Lente 37mm x 7 mm 15W BS12K-CAT.jpg" alt="Ventana de Cubierta BS12K" class="zoomable-img">
+                    </div>
                     <div>
-                        <h3 class="product-name">BS12K-CAT - Ventana de Cubierta (Fondo)</h3>
+                        <h3 class="product-name">BS12K-CAT - Lente de Protección Inferior D37mm x 7mm 15kW</h3>
                         <p class="specs">
-                            <strong>Aplicación:</strong> Protección óptica de alta potencia.<br>
-                            <strong>Función:</strong> Asegura estanqueidad y limpieza interna.
+                            <strong>Medida:</strong> D37 x 7 mm (15kW)<br>
+                            <strong>Aplicación:</strong> Protección óptica de alta potencia y sellado térmico.
                         </p>
                     </div>
                     <div class="quantity-selector">
-                        <span style="font-size: 0.85em; font-weight: 500;">Cantidad:</span>
-                        <div style="display: flex; gap: 5px; align-items
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lente de Colimación BS12K -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="Lente 24.9X1.5mm 15KW BS12K-CAT.jpg" alt="Lente Colimador BS12K" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Lente Colimador D24.9 x 1.5mm 15kW</h3>
+                        <p class="specs">
+                            <strong>Medida:</strong> D24.9 x 1.5 mm (15kW)<br>
+                            <strong>Lente:</strong> Colimación precisa del haz para fibra óptica de ultra-potencia.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cerámico M11 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="CERAMICO M11.jpg" alt="Anillo Cerámico BS12K M11" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Anillo Cerámico M11</h3>
+                        <p class="specs">
+                            <strong>Función:</strong> Sensor capacitivo de altura.<br>
+                            <strong>Material:</strong> Cerámica técnica con aislamiento de alta temperatura.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cerámico M11 Versión 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="CERAMICO M11- 2.jpg" alt="Anillo Cerámico M11-2" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Anillo Cerámico M11 | Tipo 2</h3>
+                        <p class="specs">
+                            <strong>Función:</strong> Sensor capacitivo de regulación de altura.<br>
+                            <strong>Resistencia:</strong> Tolerancia térmica extendida.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cerámico M8 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="CERAMICO M8.jpg" alt="Anillo Cerámico M8" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Anillo Cerámico M8</h3>
+                        <p class="specs">
+                            <strong>Rosca:</strong> M8<br>
+                            <strong>Función:</strong> Transmisión precisa de señal de contacto.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cartucho PW BS12K -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="CARTUCHO PW.png" alt="Cartucho BS12K" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Cartucho de Lente (PW)</h3>
+                        <p class="specs">
+                            <strong>Compatibilidad:</strong> Cabezal BS12K-CAT<br>
+                            <strong>Función:</strong> Portalentes extraíble de ajuste continuo.
+                        </p>
+                    </div>
+                    <div class="quantity-selector">
+                        <span style="font-size: 0.85em; font-weight: 600;">Cantidad:</span>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button class="btn-qty decrease">-</button>
+                            <input type="number" value="0" min="0" class="qty-input">
+                            <button class="btn-qty increase">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOQUILLA DOBLE M11 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="BOQUILLA DOBLE M-11.jpg" alt="Boquilla Doble M11" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Boquilla Doble M11</h3>
+                        <p class="specs">
+                            <strong>Aplicación:</strong> Corte industrial de alta potencia con Oxígeno.<br>
+                            <strong>Rosca:</strong> M11. Selecciona medida(s):
+                        </p>
+                    </div>
+                    <div class="nozzles-list">
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.2 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 4.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOQUILLA SIMPLE M11 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="BOQUILLA SENCILLA M-11.jpg" alt="Boquilla Simple M11" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Boquilla Simple M11</h3>
+                        <p class="specs">
+                            <strong>Aplicación:</strong> Corte industrial con Nitrógeno / Aire.<br>
+                            <strong>Rosca:</strong> M11. Selecciona medida(s):
+                        </p>
+                    </div>
+                    <div class="nozzles-list">
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.2 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 4.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOQUILLA DOBLE M8 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="BOQUILLA DOBLE M8.jpg" alt="Boquilla Doble M8" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Boquilla Doble M8</h3>
+                        <p class="specs">
+                            <strong>Aplicación:</strong> Corte con Oxígeno.<br>
+                            <strong>Rosca:</strong> M8. Selecciona medida(s):
+                        </p>
+                    </div>
+                    <div class="nozzles-list">
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.2 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 1.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 2.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Doble 4.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOQUILLA SIMPLE M8 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="BOQUILLA SENCILLA M8.jpg" alt="Boquilla Simple M8" class="zoomable-img">
+                    </div>
+                    <div>
+                        <h3 class="product-name">BS12K-CAT - Boquilla Simple M8</h3>
+                        <p class="specs">
+                            <strong>Aplicación:</strong> Corte con Nitrógeno / Aire.<br>
+                            <strong>Rosca:</strong> M8. Selecciona medida(s):
+                        </p>
+                    </div>
+                    <div class="nozzles-list">
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.2 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 1.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 2.5 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                        <div class="nozzle-row">
+                            <label><input type="checkbox" class="nozzle-check"> Boquilla Simple 4.0 mm</label>
+                            <div class="nozzle-controls">
+                                <button class="btn-qty-sm decrease-sm">-</button>
+                                <input type="number" value="0" min="0" class="qty-input-sm nozzle-qty">
+                                <button class="btn-qty-sm increase-sm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECCIÓN: SERVICIOS TÉCNICOS Y MANTENIMIENTO -->
+        <div id="servicios-tecnicos" style="margin-top: 60px;">
+            <div class="section-header-flex">
+                <h2>🛠️ Servicios Técnicos y Mantenimiento Industrial</h2>
+                <span>Especialistas en Cortadoras Láser</span>
+            </div>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                <div class="service-card">
+                    <div>
+                        <h3>Póliza de Mantenimiento Preventivo Láser</h3>
+                        <p>• Inspección integral de sistema neumático y purga de compresores.<br>• Revisión de voltajes y taps de transformador (220V - 380V).<br>• Lubricación milimétrica de rieles, patines y cadenas de arrastre.</p>
+                    </div>
+                    <a href="https://wa.me/528701711924?text=Hola,%20me%20interesa%20agendar%20una%20visita%20para%20la%20Póliza%20de%20Mantenimiento%20Preventivo%20Láser" class="btn-card-action" target="_blank">Agendar Visita o Diagnóstico</a>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <h3>Diagnóstico e Intervención Óptica</h3>
+                        <p>• Reemplazo profesional y calibración de lentes de colimación y enfoque.<br>• Sustitución y prueba de estanqueidad en cristales protectores.<br>• Reducción de merma por dispersión de haz láser.</p>
+                    </div>
+                    <a href="https://wa.me/528701711924?text=Hola,%20solicito%20información%20para%20Diagnóstico%20e%20Intervención%20Óptica%20en%20mi%20equipo" class="btn-card-action" target="_blank">Agendar Visita o Diagnóstico</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SECCIÓN: INGENIERÍA Y DISEÑO METALMECÁNICO B2B -->
+        <div id="ingenieria-b2b" style="margin-top: 60px; margin-bottom: 40px;">
+            <div class="section-header-flex">
+                <h2>📐 Ingeniería y Diseño Metalmecánico B2B</h2>
+                <span>Optimización de Procesos de Chapa Metálica</span>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                <div class="service-card">
+                    <div>
+                        <h3>Desarrollo de Planimetría y Tolerancias</h3>
+                        <p>Creación de planos de fabricación avanzados y análisis de tolerancias de ensamble mecánico para chapa metálica de alta precisión.</p>
+                    </div>
+                    <a href="https://wa.me/528701711924?text=Hola,%20necesito%20asesoría%20en%20desarrollo%20de%20planimetría%20y%20tolerancias%20para%20chapa%20metálica" class="btn-card-action" target="_blank">Cotizar Proyecto B2B</a>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <h3>Optimización de Dobleces</h3>
+                        <p>Diseño con muescas de alivio y configuración de punzones facetados para acelerar tiempos de doblado y reducir costos de producción.</p>
+                    </div>
+                    <a href="https://wa.me/528701711924?text=Hola,%20me%20interesa%20optimizar%20mis%20procesos%20de%20dobleces%20y%20punzones%20para%20ahorro%20de%20procesos" class="btn-card-action" target="_blank">Cotizar Proyecto B2B</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal para Zoom de Imágenes con botón de cierre (Tachita ✕) -->
+    <div id="zoomModal" class="zoom-modal">
+        <div class="zoom-modal-content">
+            <button id="zoomCloseBtn" class="zoom-close-btn">&times;</button>
+            <img id="zoomModalImg" src="" alt="Vista Ampliada">
+        </div>
+    </div>
+
+    <!-- Pie de página con botón de cotización global a WhatsApp -->
+    <footer class="footer-quote">
+        <a href="#" id="global-quote-btn" class="btn-ws-global" target="_blank">
+            <span>Cotizar mi Selección por WhatsApp</span>
+        </a>
+    </footer>
+
+    <!-- Lógica JavaScript Interactivas para Zoom, Cuantificación de Pedidos y WhatsApp -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const whatsappNumber = '528701711924';
+            const globalQuoteBtn = document.getElementById('global-quote-btn');
+
+            // 1. Sistema Global de Zoom para TODAS las imágenes (.zoomable-img)
+            const zoomModal = document.getElementById('zoomModal');
+            const zoomModalImg = document.getElementById('zoomModalImg');
+            const zoomCloseBtn = document.getElementById('zoomCloseBtn');
+            const zoomableImgs = document.querySelectorAll('.zoomable-img');
+
+            zoomableImgs.forEach(img => {
+                img.addEventListener('click', function() {
+                    zoomModal.style.display = 'flex';
+                    zoomModalImg.src = this.src;
+                    zoomModalImg.alt = this.alt || 'Vista ampliada';
+                });
+            });
+
+            function closeZoomModal() {
+                zoomModal.style.display = 'none';
+            }
+
+            if (zoomCloseBtn) {
+                zoomCloseBtn.addEventListener('click', closeZoomModal);
+            }
+            if (zoomModal) {
+                zoomModal.addEventListener('click', function(e) {
+                    if (e.target === zoomModal) {
+                        closeZoomModal();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    closeZoomModal();
+                }
+            });
+
+            // 2. Cálculo dinámico de cotización para WhatsApp
+            function updateQuantification() {
+                let quoteText = "Hola, DIP Laguna. Me interesa solicitar la cotización de los siguientes consumibles:\n";
+                let itemsList = "";
+                let hasItems = false;
+
+                // A. Productos estándar (Lentes, cerámicos, cartuchos)
+                const productCards = document.querySelectorAll('.product-card');
+                productCards.forEach(card => {
+                    const qtyInput = card.querySelector('.qty-input');
+                    const nameEl = card.querySelector('.product-name');
+                    
+                    if (qtyInput && nameEl) {
+                        const qtyValue = parseInt(qtyInput.value) || 0;
+                        if (qtyValue > 0) {
+                            itemsList += `• ${nameEl.innerText.trim()}: ${qtyValue} piezas\n`;
+                            hasItems = true;
+                        }
+                    }
+
+                    // B. Filas de Boquillas con checkbox y selector de medida
+                    const nozzleRows = card.querySelectorAll('.nozzle-row');
+                    nozzleRows.forEach(row => {
+                        const checkbox = row.querySelector('.nozzle-check');
+                        const qtyInputSm = row.querySelector('.nozzle-qty');
+                        if (checkbox && checkbox.checked && qtyInputSm) {
+                            const qtyVal = parseInt(qtyInputSm.value) || 0;
+                            const rowLabel = row.querySelector('label') ? row.querySelector('label').innerText.trim() : '';
+                            const cardTitle = nameEl ? nameEl.innerText.trim() : '';
+                            if (qtyVal > 0) {
+                                itemsList += `• cardTitle({rowLabel}): ${qtyVal} piezas\n`;
+                                hasItems = true;
+                            }
+                        }
+                    });
+                });
+
+                if (hasItems) {
+                    quoteText += itemsList;
+                } else {
+                    quoteText = "Hola, DIP Laguna. Me interesa recibir información sobre consumibles y servicios para corte láser fibra.";
+                }
+
+                const encodedMessage = encodeURIComponent(quoteText);
+                const whatsappUrl = `https://wa.me/whatsappNumber?text={encodedMessage}`;
+                globalQuoteBtn.setAttribute('href', whatsappUrl);
+            }
+
+            // 3. Controladores para contadores principales (+ / -)
+            document.querySelectorAll('.quantity-selector').forEach(selector => {
+                const decreaseBtn = selector.querySelector('.decrease');
+                const increaseBtn = selector.querySelector('.increase');
+                const qtyInput = selector.querySelector('.qty-input');
+
+                if (decreaseBtn && increaseBtn && qtyInput) {
+                    decreaseBtn.addEventListener('click', function() {
+                        let currentVal = parseInt(qtyInput.value) || 0;
+                        if (currentVal > 0) {
+                            qtyInput.value = currentVal - 1;
+                            updateQuantification();
+                        }
+                    });
+
+                    increaseBtn.addEventListener('click', function() {
+                        let currentVal = parseInt(qtyInput.value) || 0;
+                        qtyInput.value = currentVal + 1;
+                        updateQuantification();
+                    });
+
+                    qtyInput.addEventListener('input', function() {
+                        let currentVal = parseInt(qtyInput.value);
+                        if (isNaN(currentVal) || currentVal < 0) { qtyInput.value = 0; }
+                        updateQuantification();
+                    });
+                }
+            });
+
+            // 4. Controladores para contadores de boquillas y enlaces con Checkbox
+            document.querySelectorAll('.nozzle-row').forEach(row => {
+                const checkbox = row.querySelector('.nozzle-check');
+                const decreaseBtn = row.querySelector('.decrease-sm');
+                const increaseBtn = row.querySelector('.increase-sm');
+                const qtyInput = row.querySelector('.nozzle-qty');
+
+                if (decreaseBtn && increaseBtn && qtyInput) {
+                    decreaseBtn.addEventListener('click', function() {
+                        let currentVal = parseInt(qtyInput.value) || 0;
+                        if (currentVal > 0) {
+                            qtyInput.value = currentVal - 1;
+                            if (parseInt(qtyInput.value) === 0 && checkbox) { 
+                                checkbox.checked = false; 
+                            }
+                            updateQuantification();
+                        }
+                    });
+
+                    increaseBtn.addEventListener('click', function() {
+                        let currentVal = parseInt(qtyInput.value) || 0;
+                        qtyInput.value = currentVal + 1;
+                        if (parseInt(qtyInput.value) > 0 && checkbox) { 
+                            checkbox.checked = true; 
+                        }
+                        updateQuantification();
+                    });
+
+                    qtyInput.addEventListener('input', function() {
+                        let currentVal = parseInt(qtyInput.value);
+                        if (isNaN(currentVal) || currentVal < 0) { qtyInput.value = 0; }
+                        if (checkbox) {
+                            checkbox.checked = parseInt(qtyInput.value) > 0;
+                        }
+                        updateQuantification();
+                    });
+                }
+
+                if (checkbox && qtyInput) {
+                    checkbox.addEventListener('change', function() {
+                        if (checkbox.checked && (parseInt(qtyInput.value) || 0) === 0) {
+                            qtyInput.value = 1;
+                        } else if (!checkbox.checked) {
+                            qtyInput.value = 0;
+                        }
+                        updateQuantification();
+                    });
+                }
+            });
+
+            updateQuantification();
+        });
+    </script>
+</body>
+</html>
